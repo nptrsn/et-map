@@ -4,7 +4,7 @@ MyModuleConstructor.prototype = {
 
 	// 1
 	isArray: function(value) {
-		var arr = "[]";
+		var arr = [];
 		if value = arr {
 			return true;
 		}
