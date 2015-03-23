@@ -15,6 +15,10 @@ MyModuleConstructor.prototype = {
 
 	// 2
 	cloneArray: function(arr1) {
+		if (arr1 = value) {
+			return true
+		}
+		else false
 	},
 
 	// 3
