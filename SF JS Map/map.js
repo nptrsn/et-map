@@ -839,12 +839,47 @@ function hoverAlamoSquare(){
 
   // Define the Lat &Lng coordinates for the polygon's path
   var shapeCoords = [
-  	new google.maps.LatLng(37.780509, -122.432142),
-	new google.maps.LatLng(37.779593, -122.438708),
-	new google.maps.LatLng(37.775058, -122.437895),
-	new google.maps.LatLng(37.776228, -122.427939),
-	new google.maps.LatLng(37.779060, -122.428561),
-	new google.maps.LatLng(37.778638, -122.431768)
+  	new google.maps.LatLng(37.780509,-122.432142),
+	new google.maps.LatLng(37.779593,-122.438708),
+	new google.maps.LatLng(37.775058,-122.437895),
+	new google.maps.LatLng(37.776228,-122.427939),
+	new google.maps.LatLng(37.779060,-122.428561),
+	new google.maps.LatLng(37.778638,-122.431768)
+  ];
+
+  // Construct the polygon
+  areaHighlight = new google.maps.Polygon({
+    paths: shapeCoords,
+    strokeColor: '#a0151f',
+    strokeOpacity: 0.3,
+    strokeWeight: 1,
+    fillColor: '#a0151f',
+    fillOpacity: 0.35
+  });
+
+  areaHighlight.setMap(map);
+}
+
+// Clear the map
+function clearMap(){
+  areaHighlight.setMap(null);
+}
+
+// Highlight Bernal Heights area
+function hoverBernalHeights(){
+
+  // Define the Lat &Lng coordinates for the polygon's path
+  var shapeCoords = [
+  	new google.maps.LatLng(37.747750,-122.424745),
+	new google.maps.LatLng(37.740590,-122.424102),
+	new google.maps.LatLng(37.737196,-122.425775),
+	new google.maps.LatLng(37.734379,-122.429766),
+	new google.maps.LatLng(37.731868,-122.435603),
+	new google.maps.LatLng(37.732309,-122.416291),
+	new google.maps.LatLng(37.737264,-122.408223),
+	new google.maps.LatLng(37.742049,-122.407579),
+	new google.maps.LatLng(37.749379,-122.403717),
+	new google.maps.LatLng(37.748361,-122.407794)
   ];
 
   // Construct the polygon
