@@ -834,12 +834,38 @@ function hoverCivicCenter(){
   areaHighlight.setMap(map);
 }
 
+// Highlight Alamo Square area
+function hoverAlamoSquare(){
+
+  // Define the Lat &Lng coordinates for the polygon's path
+  var shapeCoords = [
+  	new google.maps.LatLng(37.780509, -122.432142),
+	new google.maps.LatLng(37.779593, -122.438708),
+	new google.maps.LatLng(37.775058, -122.437895),
+	new google.maps.LatLng(37.776228, -122.427939),
+	new google.maps.LatLng(37.779060, -122.428561),
+	new google.maps.LatLng(37.778638, -122.431768)
+  ];
+
+  // Construct the polygon
+  areaHighlight = new google.maps.Polygon({
+    paths: shapeCoords,
+    strokeColor: '#a0151f',
+    strokeOpacity: 0.3,
+    strokeWeight: 1,
+    fillColor: '#a0151f',
+    fillOpacity: 0.35
+  });
+
+  areaHighlight.setMap(map);
+}
+
 // Clear the map
 function clearMap(){
   areaHighlight.setMap(null);
 }
 
-
+// Done with Neighborhood Highlights
 function initialize() {
         mapOptions = {
           center: { lat: 37.7757, lng: -122.4376},
