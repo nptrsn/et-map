@@ -895,6 +895,31 @@ function hoverBernalHeights(){
   areaHighlight.setMap(map);
 }
 
+// Highlight Downtown area
+function hoverDowntown(){
+
+  // Define the Lat &Lng coordinates for the polygon's path
+  var shapeCoords = [
+  	new google.maps.LatLng(37.799047,-122.397863),
+	new google.maps.LatLng(37.797809,-122.407025),
+	new google.maps.LatLng(37.786685,-122.404772),
+	new google.maps.LatLng(37.794239,-122.395203),
+	new google.maps.LatLng(37.795510,-122.396748),
+  ];
+
+  // Construct the polygon
+  areaHighlight = new google.maps.Polygon({
+    paths: shapeCoords,
+    strokeColor: '#a0151f',
+    strokeOpacity: 0.3,
+    strokeWeight: 1,
+    fillColor: '#a0151f',
+    fillOpacity: 0.35
+  });
+
+  areaHighlight.setMap(map);
+}
+
 // Clear the map
 function clearMap(){
   areaHighlight.setMap(null);
