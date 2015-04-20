@@ -1247,7 +1247,7 @@ function clearMap(){
 // Done with Neighborhood Highlights
 function initialize() {
         mapOptions = {
-          center: { lat: 37.7757, lng: -122.4376},
+          center: { lat: 40.645244, lng: -73.9449975},
           zoom: 12,
           scrollwheel: false,
           disableDefaultUI: true
