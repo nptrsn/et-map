@@ -1,0 +1,132 @@
+/*----------PARALLAX
+-------------------*/
+.parallax-column {
+ margin-bottom: 0; 
+}
+.parallax {
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position: 0 90px;
+  background-attachment: fixed;
+  margin-top: -30px;
+  height: 1040px;
+}
+.parallax-individual {
+  margin-top: -60px;
+}
+.parallax-home {
+  background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/home-bg.jpg');
+}
+.parallax-services {
+  background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/services-bg.jpg');
+}
+.parallax-testimonials {
+  background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/testimonials-bg.jpg');
+}
+.parallax-excercises {
+  background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/excercises-bg.jpg');
+}
+.parallax-process {
+  background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/process-bg.jpg');
+}
+.parallax-contact {
+  background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/contact-bg.jpg');
+}
+.parallax-about {
+  background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/about-bg.jpg');
+}
+@media screen and (max-width: 1905px) {
+  .parallax {
+    height: 1000px;
+  }
+}
+@media screen and (max-width: 1739px) {
+  .parallax {
+    height: 950px;
+  }
+}
+@media screen and (max-width: 1641px) {
+  .parallax {
+    height: 880px;
+  }
+}
+@media screen and (max-width: 1504px) {
+  .parallax {
+    height: 800px;
+  }
+}
+@media screen and (max-width: 1339px) {
+  .parallax {
+    height: 750px;
+  }
+}
+@media screen and (max-width: 1239px) {
+  .parallax {
+    height: 800px;
+  }
+  .parallax-home {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/home-bg-1.jpg');
+  }
+  .parallax-services {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/services-bg-1.jpg');
+  }
+  .parallax-testimonials {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/testimonials-bg-1.jpg');
+  }
+  .parallax-excercises {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/excercises-bg-11.jpg');
+  }
+  .parallax-process {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/process-bg-1.jpg');
+  }
+  .parallax-contact {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/contact-bg-1.jpg');
+  }
+  .parallax-about {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/about-bg-1.jpg');
+  }
+}
+@media screen and (max-width: 1137px) {
+  .parallax {
+    height: 750px;
+  }
+}
+@media screen and (max-width: 1539px) {
+  
+}
+@media screen and (max-width: 1051px) {
+  .parallax {
+    height: 720px;
+  }
+}
+@media screen and (max-width: 1001px) {
+  .parallax {
+    height: 780px;
+  }
+  .parallax-home {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/home-bg-2.jpg');
+  }
+  .parallax-services {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/services-bg-2.jpg');
+  }
+  .parallax-testimonials {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/testimonials-bg-2.jpg');
+  }
+  .parallax-excercises {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/excercises-bg-21.jpg');
+  }
+  .parallax-process {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/process-bg-2.jpg');
+  }
+  .parallax-contact {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/contact-bg-2.jpg');
+  }
+  .parallax-about {
+    background-image: url('http://testdoug.com/tomasfitness/wp-content/uploads/2015/04/about-bg-2.jpg');
+  }
+}
+@media screen and (max-width: 842px) {
+  .parallax {
+    height: 718px;
+  }
+}
