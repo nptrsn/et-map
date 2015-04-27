@@ -36,8 +36,8 @@ function hoverTemescal(){
 
   areaHighlight.setMap(map);
 }
-// Highlight Castro/Upper Market area
-function hoverTemescal(){
+// Highlight Bushrod area
+function hoverBushrod(){
 
   // Define the LatLng coordinates for the polygon's path
   var shapeCoords = [
