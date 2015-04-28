@@ -57,7 +57,59 @@ function hoverWallingford(){
 
   areaHighlight.setMap(map);
 }
+// Highlight UDistrict area
+function hoverUDistrict(){
 
+  // Define the LatLng coordinates for the polygon's path
+  var shapeCoords = [
+    new google.maps.LatLng(47.653683, -122.322330),
+	new google.maps.LatLng(47.659233, -122.322287),
+	new google.maps.LatLng(47.665273, -122.321944),
+	new google.maps.LatLng(47.670418, -122.322073),
+	new google.maps.LatLng(47.672296, -122.321558),
+	new google.maps.LatLng(47.672325, -122.333488),
+	new google.maps.LatLng(47.673076, -122.333574),
+	new google.maps.LatLng(47.671053, -122.336235),
+	new google.maps.LatLng(47.671631, -122.336921),
+	new google.maps.LatLng(47.670649, -122.337951),
+	new google.maps.LatLng(47.670244, -122.337951),
+	new google.maps.LatLng(47.670187, -122.339882),
+	new google.maps.LatLng(47.668727, -122.340054),
+	new google.maps.LatLng(47.665750, -122.340097),
+	new google.maps.LatLng(47.665071, -122.340312),
+	new google.maps.LatLng(47.665042, -122.347307),
+	new google.maps.LatLng(47.656695, -122.347284),
+	new google.maps.LatLng(47.656646, -122.342414),
+	new google.maps.LatLng(47.648056, -122.342742),
+	new google.maps.LatLng(47.647622, -122.340188),
+	new google.maps.LatLng(47.646032, -122.338107),
+	new google.maps.LatLng(47.645107, -122.337249),
+	new google.maps.LatLng(47.644514, -122.335918),
+	new google.maps.LatLng(47.644485, -122.333987),
+	new google.maps.LatLng(47.644875, -122.333236),
+	new google.maps.LatLng(47.645602, -122.332866),
+	new google.maps.LatLng(47.646918, -122.332866),
+	new google.maps.LatLng(47.648117, -122.331128),
+	new google.maps.LatLng(47.649115, -122.331535),
+	new google.maps.LatLng(47.651514, -122.329046),
+	new google.maps.LatLng(47.651326, -122.328553),
+	new google.maps.LatLng(47.653100, -122.326858),
+	new google.maps.LatLng(47.653389, -122.325506),
+	new google.maps.LatLng(47.653389, -122.323854),
+  ];
+
+  // Construct the polygon
+  areaHighlight = new google.maps.Polygon({
+    paths: shapeCoords,
+    strokeColor: '#a0151f',
+    strokeOpacity: 0.3,
+    strokeWeight: 1,
+    fillColor: '#a0151f',
+    fillOpacity: 0.35
+  });
+
+  areaHighlight.setMap(map);
+}
 ///////////////////
 // Clear the map
 function clearMap(){
