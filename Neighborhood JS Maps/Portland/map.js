@@ -39,17 +39,10 @@ function hoverAlberta(){
 
   // Define the LatLng coordinates for the polygon's path
   var shapeCoords = [
-    new google.maps.LatLng(45.519274, -122.617333),
-  new google.maps.LatLng(45.531661, -122.617247),
-  new google.maps.LatLng(45.534607, -122.629006),
-  new google.maps.LatLng(45.534457, -122.630680),
-  new google.maps.LatLng(45.528414, -122.630701),
-  new google.maps.LatLng(45.527632, -122.631302),
-  new google.maps.LatLng(45.526783, -122.631667),
-  new google.maps.LatLng(45.522151, -122.631678),
-  new google.maps.LatLng(45.522128, -122.632107),
-  new google.maps.LatLng(45.519299, -122.631996),
-  new google.maps.LatLng(45.519284, -122.617308),
+  new google.maps.LatLng(45.557284, -122.649747),
+  new google.maps.LatLng(45.559989, -122.649715),
+  new google.maps.LatLng(45.560019, -122.658513),
+  new google.maps.LatLng(45.557303, -122.658577)
   ];
 
   // Construct the polygon
