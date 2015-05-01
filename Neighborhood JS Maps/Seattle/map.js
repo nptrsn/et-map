@@ -95,6 +95,44 @@ function hoverUDistrict(){
 
   areaHighlight.setMap(map);
 }
+// Highlight Fremont area
+function hoverFremont(){
+
+  // Define the LatLng coordinates for the polygon's path
+  var shapeCoords = [
+    new google.maps.LatLng(47.647370, -122.300174),
+	new google.maps.LatLng(47.649365, -122.297041),
+	new google.maps.LatLng(47.651880, -122.295625),
+	new google.maps.LatLng(47.653759, -122.292320),
+	new google.maps.LatLng(47.654453, -122.286655),
+	new google.maps.LatLng(47.658355, -122.286848),
+	new google.maps.LatLng(47.658529, -122.290582),
+	new google.maps.LatLng(47.661246, -122.292771),
+	new google.maps.LatLng(47.661361, -122.300517),
+	new google.maps.LatLng(47.667864, -122.300656),
+	new google.maps.LatLng(47.667951, -122.303822),
+	new google.maps.LatLng(47.669974, -122.304122),
+	new google.maps.LatLng(47.671563, -122.311890),
+	new google.maps.LatLng(47.671159, -122.313048),
+	new google.maps.LatLng(47.672141, -122.318413),
+	new google.maps.LatLng(47.674511, -122.321159),
+	new google.maps.LatLng(47.653788, -122.322490),
+	new google.maps.LatLng(47.653701, -122.318155),
+	new google.maps.LatLng(47.647833, -122.309229),
+];
+
+  // Construct the polygon
+  areaHighlight = new google.maps.Polygon({
+    paths: shapeCoords,
+    strokeColor: '#a0151f',
+    strokeOpacity: 0.3,
+    strokeWeight: 1,
+    fillColor: '#a0151f',
+    fillOpacity: 0.35
+  });
+
+  areaHighlight.setMap(map);
+}
 ///////////////////
 // Clear the map
 function clearMap(){
