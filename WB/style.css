@@ -10,6 +10,11 @@ Version: 1.1
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 
+/*---FONT IMPORTS----*/
+@import url(http://fonts.googleapis.com/css?family=EB+Garamond);
+@font-face {font-family: 'FuturaPT-Medium';src: url('webfonts/2E2D41_0_0.eot');src: url('webfonts/2E2D41_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E2D41_0_0.woff2') format('woff2'),url('webfonts/2E2D41_0_0.woff') format('woff'),url('webfonts/2E2D41_0_0.ttf') format('truetype');}
+ 
+
 /*-----GLOBAL EDITS---
 --------------------*/
 
@@ -23,6 +28,12 @@ Version: 1.1
 #site-navigation li {
 	text-transform: uppercase;
 }
+/*-----BODY COPY-----*/
+p {
+	font-family: 'EB Garamond';
+	font-size: 1.8rem;
+	line-height: 2.2rem;
+}
 
 /*-----Footer Edits----*/
 .footer-box.span_1_of_3.col.col-1 {
@@ -32,6 +43,9 @@ Version: 1.1
 }
 .footer-box.span_1_of_3.col.col-2, .footer-box.span_1_of_3.col.col-3 { 
 	width: 25%;
+}
+.wpex-social-widget-output li img:hover {
+	opacity: 0.6;
 }
 
 /*-----HOME PAGE------
@@ -72,10 +86,12 @@ Version: 1.1
 	margin-top: 7px;
 }
 .second-nav-social {
-	width: 15%;
+	width: 20%;
+	text-align: center;
 }
+.second-nav-social 
 .second-nav-signup {
-	width: 34%;
+	width: 29%;
 }
 
 /*-----BLOG PAGES-----
