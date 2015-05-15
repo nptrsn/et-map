@@ -51,15 +51,15 @@ p {
 /*-----HOME PAGE------
 --------------------*/
 
-/*Dummy Features Image*/
-.home-feature-row {
-    height: 85vh;
+/*Features Slider*/
+div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image {
+	text-align:center;
+	margin-bottom: 40%;
 }
-.home-feature-row {
-    background-image: url('http://f2f273cb84.test-url.ws/wp-content/uploads/2015/05/abstract-q-c-1368-774-8.jpg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
+div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
+	font-family: 'FuturaPT-Medium';
+	text-transform: uppercase !important;
+	font-size: 6rem;
 }
 /* Second Nav */
 /* Turn Off Borders for Custom Menus */
@@ -68,7 +68,6 @@ p {
 }
 .secondary-nav {
 	padding: 15px 0;
-	background: black;
 }
 .secondary-nav .vcex-navbar.style-buttons a {
 	border: 0;
@@ -85,6 +84,9 @@ p {
 .second-nav-submenu .vcex-navbar {
 	margin-top: 7px;
 }
+.vcex-newsletter-form {
+	margin-top: -10px;
+}
 .second-nav-social {
 	width: 20%;
 	text-align: center;
@@ -93,11 +95,41 @@ p {
 .second-nav-signup {
 	width: 29%;
 }
-
+/*-----FEATURE--------
+-------ARTICLES------*/
+.single-post-title {
+	font-family: 'FuturaPT-Medium';
+}
+.post-in-category-features .single-post-title {
+	font-size: 5.2rem;
+	font-family: 'FuturaPT-Medium';
+	text-align: center;
+}
+.post-in-category-features .meta {
+	text-align: center;
+	font-family: 'FuturaPT-Medium';
+	font-size: 1.8rem;
+	color: #000;
+	margin-left: 32%;
+}
+.post-in-category-features .meta a {
+	color: #000;
+}
+.post-in-category-features p {
+	font-size: 2.2rem;
+    line-height: 3rem;
+}
+.post-in-category-features .container {
+	width: 860px !important;
+}
+.post-in-category-features .meta-category, .post-in-category-features .meta-comments {
+	display: none;
+}
 /*-----BLOG PAGES-----
 --------------------*/
 
 /* Hide the Page Header & Breadcrumbs */
 .single-post .page-header {
 	display: none;
+
 }
