@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
- Theme Name     : Total Child
+ Theme Name     : Wine & Bowties 2015
  Version        : 2.0.0
  Description    : Visual Composer Extensions for Total
  Author         : WPExplorer
@@ -13,10 +13,8 @@
 --------------------------------------------------------------*/
 .vcex-posttype-slider-title .entry-title {
 	text-align:center !important;
-	margin-bottom: 40% !important;
+	margin-bottom: 30% !important;
 }
-.vcex-posttype-slider-title .entry-title a {
-	font-family: 'FuturaPT-Medium';
-	text-transform: uppercase;
-	font-size: 5rem;
+.vcex-posttypes-slider .wpex-slider-caption.over-image .title:hover {
+	text-decoration: none !important;
 }

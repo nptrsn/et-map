@@ -12,11 +12,38 @@ Version: 1.1
 
 /*---FONT IMPORTS----*/
 @import url(http://fonts.googleapis.com/css?family=EB+Garamond);
-@font-face {font-family: 'FuturaPT-Medium';src: url('webfonts/2E2D41_0_0.eot');src: url('webfonts/2E2D41_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E2D41_0_0.woff2') format('woff2'),url('webfonts/2E2D41_0_0.woff') format('woff'),url('webfonts/2E2D41_0_0.ttf') format('truetype');}
- 
+@font-face {font-family: 'FuturaPT-Demi';src: url('webfonts/2E2F33_0_0.eot');src: url('webfonts/2E2F33_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E2F33_0_0.woff2') format('woff2'),url('webfonts/2E2F33_0_0.woff') format('woff'),url('webfonts/2E2F33_0_0.ttf') format('truetype');}
+ @font-face {
+    font-family: 'max-hw';
+    src: url('webfonts/max-hw/max-hw-webfont.eot');
+    src: url('webfonts/max-hw/max-hw-webfont.eot?#iefix') format('embedded-opentype'),
+         url('webfonts/max-hw/max-hw-webfont.woff2') format('woff2'),
+         url('webfonts/max-hw/max-hw-webfont.woff') format('woff'),
+         url('webfonts/max-hw/max-hw-webfont.ttf') format('truetype'),
+         url('webfonts/max-hw/max-hw-webfont.svg#maaxxxxxxmedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+	font-family: 'FuturaPT-Demi';
+	src: url('FTN65__W.eot');
+	src: local('Futura PT Web Demi'), local('FuturaPTWebDemi'), url('FTN65__W.woff') format('woff'),url('FTN65__W.ttf') format('truetype'), url('FTN65__W.svg#FuturaPTWeb-Demi') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
 
 /*-----GLOBAL EDITS---
 --------------------*/
+
+/* Header Logo Font */
+#site-logo a {
+	font-family: 'max-hw';
+	font-size: 5rem;
+}
+/* Main Margin */
+#main {
+	margin-top: 60px;
+}
 
 /*------Nav Bar-----*/
 .site-header-sticky-wrapper {
@@ -28,11 +55,72 @@ Version: 1.1
 #site-navigation li {
 	text-transform: uppercase;
 }
-/*-----BODY COPY-----*/
-p {
+.home .navbar-style-one .dropdown-menu > li > a {
+	font-size: 16px;
+}
+.navbar-style-one .dropdown-menu > li > a {
+	font-family: 'FuturaPT-Demi';
+	color: black;
+	letter-spacing: 3px;
+}
+#site-navigation .dropdown-menu > li > a > span.link-inner:hover, .navbar-style-one .dropdown-menu > .current-menu-item > a:active {
+	color: black;
+	text-decoration: underline;
+}
+.home #site-navigation .dropdown-menu > li > a > span.link-inner:hover, .home #site-navigation .dropdown-menu > li > a > span.link-inner:active {
+	color: white;
+}
+.is-sticky #site-header {
+     box-shadow: none; 
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none; 
+}
+/*---Main Navbar Social Icons---*/
+#menu-item-54687 span.link-inner {
+	padding: 7px 0 0 5px;
+	}
+#menu-item-54688 span.link-inner, #menu-item-54689 span.link-inner, #menu-item-54690 span.link-inner {
+	padding: 7px 0 0 0;
+}
+#menu-item-54687:hover, #menu-item-54688:hover, #menu-item-54689:hover, #menu-item-54690:hover {
+	opacity: .7;
+}
+body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inner li a img {
+	margin-top: 13px;
+	width: 25px;
+}
+
+/*----Post Meta----*/
+.meta-date .fa, .meta-author .fa {
+	display: none;
+}
+.meta-date::after {
+   content: '·';
+   position: relative;
+   right: -10px;
+   font-weight: bold;
+ }
+/*-----Body Copy-----*/
+#primary {
+	width: 715px;
+}
+.single-post .entry p {
 	font-family: 'EB Garamond';
-	font-size: 1.8rem;
-	line-height: 2.2rem;
+	font-size: 2.0rem;
+	line-height: 2.8rem;
+	color: black;
+}
+/*-----Blog Side Bar---*/
+.wpex-widget-recent-posts-thumbnail {
+	width: 80px;
+}
+.wpex-widget-recent-posts-title {
+	padding-left: 10px;
+	font-size: 1.6rem;
+}
+.wpex-widget-recent-posts-date {
+	padding-left: 10px;
+	font-size: 1rem;
 }
 
 /*-----Footer Edits----*/
@@ -44,22 +132,78 @@ p {
 .footer-box.span_1_of_3.col.col-2, .footer-box.span_1_of_3.col.col-3 { 
 	width: 25%;
 }
+.wpex-social-widget-output li img {
+	width: 35px;
+}
 .wpex-social-widget-output li img:hover {
 	opacity: 0.6;
 }
 
+/*----Related Posts----*/
+.related-post-title {
+    font-size: 2rem;
+    font-family: 'FuturaPT-Demi';
+    letter-spacing: 3px;
+}
+
+.related-post-excerpt p {
+	font-size: 1.4rem;
+    line-height: 2rem;
+}
+.related-post-excerpt h3 {
+	display: none;
+}
+
 /*-----HOME PAGE------
 --------------------*/
-
+.home #site-logo a {
+	content: url('http://f2f273cb84.test-url.ws/wp-content/uploads/2015/05/cropped-wb-logo-white.png');
+    width: 300px;
+}
+.home #site-header-inner {
+	width: 95% !important;
+}
+#site-header-sticky-wrapper {
+	height: 70px !important;
+}
+.home #site-logo a, .home .navbar-style-one .dropdown-menu > li > a {
+	color: white;
+}
+.home #site-header-inner {
+	background: inherit;
+	z-index: 999;
+}
 /*Features Slider*/
+.home-features {
+	height: 99vh;
+	width: auto !important;
+}
+.home #main {
+	margin-top: -116px;
+}
+.wpex-slider .sp-arrow {
+	background: none;
+	font-size: 8rem;
+}
+.wpex-slider .sp-arrow:hover {
+	background: none;
+}
+.wpex-slider .sp-arrow.sp-previous-arrow:before {
+    content: url("http://f2f273cb84.test-url.ws/wp-content/themes/w-b-theme/images/left-arrow-50.png");
+}
+.wpex-slider .sp-arrow.sp-next-arrow:before {
+    content: url("http://f2f273cb84.test-url.ws/wp-content/themes/w-b-theme/images/right-arrow-50.png");
+}
 div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image {
 	text-align:center;
-	margin-bottom: 40%;
+	top: 50%;
+    margin-top: -25px;
 }
 div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
-	font-family: 'FuturaPT-Medium';
+	font-family: 'FuturaPT-Demi';
+	letter-spacing: 3px;
 	text-transform: uppercase !important;
-	font-size: 6rem;
+	font-size: 4rem;
 }
 /* Second Nav */
 /* Turn Off Borders for Custom Menus */
@@ -67,10 +211,21 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	margin-bottom: 0;
 }
 .secondary-nav {
-	padding: 15px 0;
+	padding: 15px 0 5px 0;
+	font-family: "FuturaPT-Demi";
+	letter-spacing: 3px;
+}
+.second-nav-scroll {
+	position: fixed;
+	top: 32px;
+	padding-top: 20px;
+	z-index: 9999;
+	width: 100%;
+	background: white;
 }
 .secondary-nav .vcex-navbar.style-buttons a {
 	border: 0;
+	color: black;
 }
 .second-nav-menu {
 	width: 30%;
@@ -91,39 +246,120 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	width: 20%;
 	text-align: center;
 }
+.second-social-wrap a:hover {
+	opacity: .7;
+}
 .second-nav-social 
 .second-nav-signup {
 	width: 29%;
 }
+/* Code for Black Option on Nav Bar, Comment Out to Make White */
+.secondary-nav {
+	background: black;
+}
+.secondary-nav .vcex-navbar.style-buttons a {
+	color: white;
+}
+/* Post Grids */
+.home-news-grid .container {
+	width: 90% !important;
+}
+.home-grid-titles {
+	font-family: 'FuturaPT-Demi';
+	letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 2rem;
+    margin-top: 10px;
+}
+.home-grid-excerpts {
+    font-family: 'EB Garamond';
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+}
+.home-grid-excerpts .vc_gitem-link {
+	color: black !important;
+}
+.home-grid-excerpts .vc_gitem-link:hover, .home-grid-titles .vc_gitem-link:hover {
+	color: #989898 !important;
+	text-decoration: none !important;
+}
+.vc_btn-black, a.vc_btn-black, button.vc_btn-black {
+	font-family: 'FuturaPT-Demi';
+	letter-spacing: 3px;
+	margin-bottom: 20px;
+}
+/*-----CATEGORY------
+-------PAGES---------*/
+.category-grid-titles {
+  font-family: 'FuturaPT-Demi';
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  font-size: 2rem;
+  color: black;
+}
+.category-grid-excerpt {
+    font-family: 'EB Garamond';
+    font-size: 2.2rem;
+    line-height: 3rem;
+}
+.wpex-carousel-entry-title {
+    font-family: 'FuturaPT-Demi';
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    font-size: 3.6rem;
+}
+.wpex-carousel-entry-excerpt {
+	font-family: 'EB Garamond';
+	font-size: 1.8rem;
+    line-height: 2.6rem;
+	color: black;
+}
+.wpex-carousel-entry-title a:hover .wpex-carousel-entry-excerpt:hover {
+	color: #ddd;
+}
+.wpex-carousel-entry-details {
+	border: none;
+}
 /*-----FEATURE--------
 -------ARTICLES------*/
+.post-in-category-features #post-media {
+	margin-bottom: 40px;
+}
+
 .single-post-title {
-	font-family: 'FuturaPT-Medium';
+	font-family: 'FuturaPT-Demi';
+	letter-spacing: 3px;
 }
 .post-in-category-features .single-post-title {
 	font-size: 5.2rem;
-	font-family: 'FuturaPT-Medium';
+	font-family: 'FuturaPT-Demi';
+	letter-spacing: 3px;
 	text-align: center;
 }
 .post-in-category-features .meta {
 	text-align: center;
-	font-family: 'FuturaPT-Medium';
+	font-family: 'FuturaPT-Demi';
+	letter-spacing: 3px;
 	font-size: 1.8rem;
 	color: #000;
-	margin-left: 32%;
+	margin-left: 40%;
 }
 .post-in-category-features .meta a {
 	color: #000;
 }
-.post-in-category-features p {
-	font-size: 2.2rem;
-    line-height: 3rem;
+.post-in-category-features .entry p {
+	font-size: 2.4rem;
+    line-height: 3.6rem;
+    font-family: 'EB Garamond';
+    color: black;
+    padding: 0 15%;
 }
-.post-in-category-features .container {
-	width: 860px !important;
-}
-.post-in-category-features .meta-category, .post-in-category-features .meta-comments {
+.post-in-category-features .meta-category, .post-in-category-features .meta-comments, .post-in-category-features #sidebar {
 	display: none;
+}
+@media only screen and (min-width: 1281px) {
+	.post-in-category-features .container, .vc_row-fluid.container {
+	  width: 1280px !important;
 }
 /*-----BLOG PAGES-----
 --------------------*/
@@ -132,4 +368,17 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 .single-post .page-header {
 	display: none;
 
+}
+/*----CONTACT PAGE-----*/
+.page-id-2495 {
+	font-size: 3rem;
+    font-family: 'FuturaPT-Demi';
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.page-id-2495 p {
+	font-size: 1.6rem;
+    font-family: 'EB-Garamond';
 }
