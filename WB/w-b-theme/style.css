@@ -10,7 +10,9 @@ Version: 1.1
 
 /* Parent stylesheet should be loaded from functions.php not using @import */
 
-/*---FONT IMPORTS----*/
+/*--------------------------------------------------------------
+- FONT IMPORTS
+--------------------------------------------------------------*/
 @import url(http://fonts.googleapis.com/css?family=EB+Garamond);
 @font-face {font-family: 'FuturaPT-Demi';src: url('webfonts/2E2F33_0_0.eot');src: url('webfonts/2E2F33_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/2E2F33_0_0.woff2') format('woff2'),url('webfonts/2E2F33_0_0.woff') format('woff'),url('webfonts/2E2F33_0_0.ttf') format('truetype');}
  @font-face {
@@ -32,15 +34,17 @@ Version: 1.1
 	font-style: normal;
 }
 
-/*-----GLOBAL EDITS---
---------------------*/
+/*--------------------------------------------------------------
+- GLOBAL EDITS
+--------------------------------------------------------------*/
 
-/* Header Logo Font */
+/*----Header----
+----Logo Font---*/
 #site-logo a {
 	font-family: 'max-hw';
 	font-size: 5rem;
 }
-/* Main Margin */
+/*----Main Margin----*/
 #main {
 	margin-top: 60px;
 }
@@ -63,7 +67,7 @@ Version: 1.1
 	color: black;
 	letter-spacing: 3px;
 }
-#site-navigation .dropdown-menu > li > a > span.link-inner:hover, .navbar-style-one .dropdown-menu > .current-menu-item > a:active {
+#site-navigation .dropdown-menu > li > a > span.link-inner:hover, .navbar-style-one .dropdown-menu > .current-menu-item > a {
 	color: black;
 	text-decoration: underline;
 }
@@ -75,10 +79,14 @@ Version: 1.1
     -moz-box-shadow: none;
     -webkit-box-shadow: none; 
 }
-/*---Main Navbar Social Icons---*/
+/*------Main Navbar-----
+--------Social Icons---*/
+#menu-item-54687 {
+	margin-left: 20px;
+}
 #menu-item-54687 span.link-inner {
 	padding: 7px 0 0 5px;
-	}
+}
 #menu-item-54688 span.link-inner, #menu-item-54689 span.link-inner, #menu-item-54690 span.link-inner {
 	padding: 7px 0 0 0;
 }
@@ -154,8 +162,9 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 	display: none;
 }
 
-/*-----HOME PAGE------
---------------------*/
+/*--------------------------------------------------------------
+- HOME PAGE
+--------------------------------------------------------------*/
 .home #site-logo a {
 	content: url('http://f2f273cb84.test-url.ws/wp-content/uploads/2015/05/cropped-wb-logo-white.png');
     width: 300px;
@@ -173,11 +182,8 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 	background: inherit;
 	z-index: 999;
 }
-/*Features Slider*/
-.home-features {
-	height: 99vh;
-	width: auto !important;
-}
+/*----Features---- 
+------Slider-----*/
 .home #main {
 	margin-top: -116px;
 }
@@ -205,13 +211,13 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	text-transform: uppercase !important;
 	font-size: 4rem;
 }
-/* Second Nav */
-/* Turn Off Borders for Custom Menus */
+/*-----Second-----
+-------Nav------*/
 .secondary-nav .wpb_column {
 	margin-bottom: 0;
 }
 .secondary-nav {
-	padding: 15px 0 5px 0;
+	padding: 15px 0 15px 0;
 	font-family: "FuturaPT-Demi";
 	letter-spacing: 3px;
 }
@@ -229,15 +235,17 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 }
 .second-nav-menu {
 	width: 30%;
+	text-transform: uppercase;
 }
 .second-nav-menu .vcex-navbar {
-	font-size: 2rem;
+	font-size: 1.6rem;
 }
 .second-nav-submenu {
-	width: 21%;
+	width: 25%;
+	text-transform: uppercase;
 }
 .second-nav-submenu .vcex-navbar {
-	margin-top: 7px;
+	margin-top: 3px;
 }
 .vcex-newsletter-form {
 	margin-top: -10px;
@@ -249,18 +257,23 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 .second-social-wrap a:hover {
 	opacity: .7;
 }
-.second-nav-social 
-.second-nav-signup {
-	width: 29%;
+.second-nav-social {
+	width: 20%;
 }
-/* Code for Black Option on Nav Bar, Comment Out to Make White */
+.second-nav-signup {
+	width: 25%;
+	margin-top: -5px;
+}
+/*-----Code for Black Option on Nav Bar---
+-------Comment Out to Make White--------*/
 .secondary-nav {
 	background: black;
 }
 .secondary-nav .vcex-navbar.style-buttons a {
 	color: white;
 }
-/* Post Grids */
+/*------Post-------
+--------Grids----*/
 .home-news-grid .container {
 	width: 90% !important;
 }
@@ -288,8 +301,9 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	letter-spacing: 3px;
 	margin-bottom: 20px;
 }
-/*-----CATEGORY------
--------PAGES---------*/
+/*--------------------------------------------------------------
+- CATEGORY PAGES
+--------------------------------------------------------------*/
 .category-grid-titles {
   font-family: 'FuturaPT-Demi';
   letter-spacing: 3px;
@@ -301,6 +315,7 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
     font-family: 'EB Garamond';
     font-size: 2.2rem;
     line-height: 3rem;
+    font-style: italic;
 }
 .wpex-carousel-entry-title {
     font-family: 'FuturaPT-Demi';
@@ -320,15 +335,33 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 .wpex-carousel-entry-details {
 	border: none;
 }
-/*-----FEATURE--------
--------ARTICLES------*/
+/*--------------------------------------------------------------
+- BLOG POSTS
+--------------------------------------------------------------*/
+
+/* Hide the Page Header & Breadcrumbs */
+.single-post .page-header {
+	display: none;
+}
+.single-post .meta {
+	font-family: "FuturaPT-Demi";
+	text-transform: uppercase;
+}
+.single-post-title {
+	border-bottom: 2px solid black;
+	padding-bottom: 10px;
+}
+/*--------------------------------------------------------------
+- FEATURE ARTICLES
+--------------------------------------------------------------*/
 .post-in-category-features #post-media {
 	margin-bottom: 40px;
 }
-
-.single-post-title {
+.post-in-category-features .single-post-title {
 	font-family: 'FuturaPT-Demi';
 	letter-spacing: 3px;
+	border-bottom: 0;
+	padding-bottom: 0px;
 }
 .post-in-category-features .single-post-title {
 	font-size: 5.2rem;
@@ -348,8 +381,8 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	color: #000;
 }
 .post-in-category-features .entry p {
-	font-size: 2.4rem;
-    line-height: 3.6rem;
+	font-size: 2.2rem;
+    line-height: 3.4rem;
     font-family: 'EB Garamond';
     color: black;
     padding: 0 15%;
@@ -361,15 +394,9 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	.post-in-category-features .container, .vc_row-fluid.container {
 	  width: 1280px !important;
 }
-/*-----BLOG PAGES-----
---------------------*/
-
-/* Hide the Page Header & Breadcrumbs */
-.single-post .page-header {
-	display: none;
-
-}
-/*----CONTACT PAGE-----*/
+/*--------------------------------------------------------------
+- CONTACT PAGE
+--------------------------------------------------------------*/
 .page-id-2495 {
 	font-size: 3rem;
     font-family: 'FuturaPT-Demi';
@@ -381,4 +408,32 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 .page-id-2495 p {
 	font-size: 1.6rem;
     font-family: 'EB-Garamond';
+}
+/*--------------------------------------------------------------
+- Mail Chimp Styling, Overriding Parent's extension css sheet
+--------------------------------------------------------------*/
+.vcex-newsletter-form input[type="email"] {
+	background: black !important;
+    border: black !important;
+    border-bottom: white 1px solid !important;
+    border-radius: 0 !important;
+    width: 60% !important;
+    color: white !important;
+    text-transform: uppercase !important;
+    padding-top: 15px !important; 
+    letter-spacing: 3px !important;
+}
+input[type="submit"]:hover, .theme-button:hover, button:hover. .secondary-nav .home button {
+    color: #fff !important;
+}
+.vcex-newsletter-form-button {
+    width: 75px;
+    height: 50px !important;
+    margin-bottom: 10px;
+    text-indent: 1000px;
+}
+button#mc-embedded-subscribe.vcex-newsletter-form-button {
+    background: url('http://f2f273cb84.test-url.ws/wp-content/themes/w-b-theme/images/envelope.png');
+    background-size: cover;
+    background-position-y: -15px;
 }

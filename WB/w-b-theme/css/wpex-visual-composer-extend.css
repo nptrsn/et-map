@@ -18,3 +18,16 @@
 .vcex-posttypes-slider .wpex-slider-caption.over-image .title:hover {
 	text-decoration: none !important;
 }
+
+/*--------------------------------------------------------------
+- Mail Chimp Styling
+--------------------------------------------------------------*/
+.vcex-newsletter-form input[type="email"] {
+	background: black !important;
+    border: black !important;
+    border-bottom: white 1px solid !important;
+    border-radius: 0 !important;
+    width: 60% !important;
+    color: white !important;
+    text-transform: uppercase !important;
+}
