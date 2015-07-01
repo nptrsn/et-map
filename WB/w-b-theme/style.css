@@ -4,11 +4,7 @@ Theme URI: lucidsolutions.io
 Description: Wine & Bowties 2015 Site Redesign
 Author: Nick Peterson
 Author URI: ptrsn.io
-Template: Total
-Version: 1.1
 */
-
-/* Parent stylesheet should be loaded from functions.php not using @import */
 
 /*--------------------------------------------------------------
 - FONT IMPORTS
