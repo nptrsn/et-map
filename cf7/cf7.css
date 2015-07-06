@@ -33,7 +33,6 @@ div.wpcf7-spam-blocked {
 
 div.wpcf7-validation-errors {
   border: 2px solid #f7e700;
-  display: none !important;
 }
 
 span.wpcf7-form-control-wrap {
@@ -44,8 +43,6 @@ span.wpcf7-not-valid-tip {
   color: #f00;
   font-size: 1em;
   display: block;
-  position: relative;
-  top: 8px;
 }
 
 .use-floating-validation-tip span.wpcf7-not-valid-tip { 
