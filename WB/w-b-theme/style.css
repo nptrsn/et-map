@@ -40,6 +40,9 @@ Author URI: ptrsn.io
 	font-family: 'max-hw';
 	font-size: 5rem;
 }
+.site-header {
+  height: 115px;
+}
 /*----Main Margin----*/
 #main {
 	margin-top: 60px;
