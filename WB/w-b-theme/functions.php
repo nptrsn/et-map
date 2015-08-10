@@ -48,3 +48,7 @@ function my_disable_fixed_header( $bool ) {
 
 }
 add_filter( 'wpex_has_fixed_header', 'my_disable_fixed_header' );
+
+wp_enqueue_script("jquery");
+
+

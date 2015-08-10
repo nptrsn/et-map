@@ -21,6 +21,8 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+  <script type="text/javascript" src="<?php echo get_theme_root_uri();?>/w-b-theme/js/nav.js"></script>
 	<?php wp_head(); ?>
 <div id="fb-root"></div>
 <script>(function(d, s, id) {

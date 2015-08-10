@@ -33,6 +33,21 @@ Version: 1.1
 	font-weight: normal;
 	font-style: normal;
 }
+@font-face {
+  font-family: 'Kabel';
+  src: url('webfonts/2EC256_0_0.eot');
+  src: url('webfonts/2EC256_0_0.eot?#iefix') format('embedded-opentype'),
+  url('webfonts/2EC256_0_0.woff2') format('woff2'),
+  url('webfonts/2EC256_0_0.woff') format('woff'),
+  url('webfonts/2EC256_0_0.ttf') format('truetype');
+}
+@font-face {font-family: 'P22UndergroundDemiBold';
+  src: url('webfonts/2EE463_0_0.eot');
+  src: url('webfonts/2EE463_0_0.eot?#iefix') format('embedded-opentype'),
+  url('webfonts/2EE463_0_0.woff2') format('woff2'),
+  url('webfonts/2EE463_0_0.woff') format('woff'),
+  url('webfonts/2EE463_0_0.ttf') format('truetype');}
+}
 
 /*--------------------------------------------------------------
 - GLOBAL EDITS
@@ -42,7 +57,18 @@ Version: 1.1
 ----Logo Font---*/
 #site-logo a {
 	font-family: 'max-hw';
-	font-size: 5rem;
+}
+#site-logo {
+  content: url('http://wineandbowties.com/wp-content/uploads/2015/07/wb-logo-black.png');
+  height: 18px !important;
+  width: 300px;
+  margin-top: 5px;
+}
+.home #site-logo {
+  content: url('http://wineandbowties.com/wp-content/uploads/2015/07/wb-logo-white.png');
+  height: 18px;
+  width: 300px;
+  margin-top: 35px;
 }
 /*----Main Margin----*/
 #main {
@@ -55,6 +81,7 @@ Version: 1.1
 }
 #site-header-inner {
 	padding: 15px 0;
+  height: 60px;
 }
 #site-navigation li {
 	text-transform: uppercase;
@@ -63,13 +90,16 @@ Version: 1.1
 	font-size: 16px;
 }
 .navbar-style-one .dropdown-menu > li > a {
-	font-family: 'FuturaPT-Demi';
+	font-family: 'Kabel';
 	color: black;
 	letter-spacing: 3px;
 }
 #site-navigation .dropdown-menu > li > a > span.link-inner:hover, .navbar-style-one .dropdown-menu > .current-menu-item > a {
 	color: black;
-	text-decoration: underline;
+  text-decoration: underline;
+}
+.navbar-style-one .dropdown-menu a:hover, .navbar-style-one .dropdown-menu > .current-menu-item > a {
+  color: black;
 }
 .home #site-navigation .dropdown-menu > li > a > span.link-inner:hover, .home #site-navigation .dropdown-menu > li > a > span.link-inner:active {
 	color: white;
@@ -79,9 +109,36 @@ Version: 1.1
     -moz-box-shadow: none;
     -webkit-box-shadow: none; 
 }
+#site-header-sticky-wrapper.is-sticky div#site-logo.site-branding.header-one-logo {
+  height: 18px !important;
+  margin-top: 8px;
+}
+@media screen and (max-width: 1280px) and (min-width: 960px) {
+  .header-one #site-logo,
+  #site-header-sticky-wrapper.is-sticky div#site-logo.site-branding.header-one-logo {
+    width: 225px;
+    height: 14px !important;
+    margin-top: 7px;
+  }
+  #site-header-sticky-wrapper.is-sticky div#site-logo.site-branding.header-one-logo {
+    margin-top: 12px;
+  }
+  .home #site-logo {
+    margin-top: 35px !important;
+  }
+  /* Hiding Mobile Nav Social Icons */
+  #sidr-id-menu-item-54687,
+  #sidr-id-menu-item-54688,
+  #sidr-id-menu-item-54689,
+  #sidr-id-menu-item-54690,
+  .sidr-class-mobile-menu-searchform input {
+    display: none;
+  }
+
+}
 /*------Main Navbar-----
 --------Social Icons---*/
-#menu-item-54687 {
+#menu-item-54689 {
 	margin-left: 20px;
 }
 #menu-item-54687 span.link-inner {
@@ -99,6 +156,15 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 }
 
 /*----Post Meta----*/
+.single-post-title {
+  text-transform: uppercase;
+}
+
+.meta,
+.meta a {
+  color: black;
+}
+
 .meta-date .fa, .meta-author .fa {
 	display: none;
 }
@@ -150,7 +216,7 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 /*----Related Posts----*/
 .related-post-title {
     font-size: 2rem;
-    font-family: 'FuturaPT-Demi';
+    font-family: 'Kabel';
     letter-spacing: 3px;
 }
 
@@ -166,13 +232,12 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 - HOME PAGE
 --------------------------------------------------------------*/
 .home #site-logo a {
-	content: url('http://wineandbowties.com/uploads/2015/05/cropped-wb-logo-white.png');
     width: 300px;
 }
 .home #site-header-inner {
 	width: 95% !important;
 }
-#site-header-sticky-wrapper {
+.home #site-header-sticky-wrapper {
 	height: 70px !important;
 }
 .home #site-logo a, .home .navbar-style-one .dropdown-menu > li > a {
@@ -183,13 +248,38 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 	z-index: 999;
   height: 115px;
 }
+.home .vc_btn-lg, a.vc_btn-lg, button.vc_btn-lg {
+  padding: 10px 120px;
+  text-transform: uppercase;
+  border: 2px solid transparent;
+}
+.home .vc_btn-lg:hover, a.vc_btn-lg:hover, button.vc_btn-lg:hover {
+  color: black !important;
+  background: white;
+  border: 2px solid black;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+@media only screen and (max-width: 959px) {
+  #site-header #site-logo {
+    margin-top: 8px !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  #top-bar {
+    display: none;
+  }
+  .home #site-logo {
+    margin-top: 35px !important;
+  }
+}
+
 /*----Features---- 
 ------Slider-----*/
 .home #main {
 	margin-top: -116px;
-}
-.home-feature-row {
-  height: calc(100vh - 116px);
 }
 .wpex-slider .sp-arrow {
 	background: none;
@@ -198,19 +288,18 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 .wpex-slider .sp-arrow:hover {
 	background: none;
 }
-.wpex-slider .sp-arrow.sp-previous-arrow:before {
-    content: url("http://wineandbowties.com/wp-content/themes/w-b-theme/images/left-arrow-50.png");
+div.tp-leftarrow.tparrows {
+    background: url("http://wineandbowties.com/wp-content/themes/w-b-theme/images/left-arrow-50.png");
+    height: 75px;
+    width: 50px;
 }
-.wpex-slider .sp-arrow.sp-next-arrow:before {
-    content: url("http://wineandbowties.com/wp-content/themes/w-b-theme/images/right-arrow-50.png");
+div.tp-rightarrow.tparrows {
+    background: url("http://wineandbowties.com/wp-content/themes/w-b-theme/images/right-arrow-50.png");
+    height: 75px;
+    width: 50px;
 }
-div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image {
-	text-align:center;
-	top: 50%;
-    margin-top: -25px;
-}
-div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
-	font-family: 'FuturaPT-Demi';
+div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
+	font-family: 'Kabel';
 	letter-spacing: 3px;
 	text-transform: uppercase !important;
 	font-size: 4rem;
@@ -221,21 +310,51 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	margin-bottom: 0;
 }
 .secondary-nav {
-	padding: 15px 0 15px 0;
-	font-family: "FuturaPT-Demi";
+	padding: 10px 0;
+	font-family: "Kabel";
 	letter-spacing: 3px;
+}
+@media screen and (max-width: 960px) {
+  .secondary-nav {
+    display: none;
+  }
+  .second-nav-fix,
+  .show-nav-fix {
+    display: none;
+  }
+  .home-news-grid {
+    margin-top: 40px;
+  }
 }
 .second-nav-scroll {
 	position: fixed;
-	top: 32px;
-	padding-top: 20px;
+	top: 0;
+	padding: 20px 0;
+  height: 80px;
+  margin-bottom: 40px;
 	z-index: 9999;
 	width: 100%;
 	background: white;
 }
+.second-nav-fix {
+  height: 120px;
+  width: 100%;
+  display: none;
+}
+.show-nav-fix {
+  display: block;
+}
 .secondary-nav .vcex-navbar.style-buttons a {
 	border: 0;
 	color: black;
+}
+@media screen and (max-width: 1280px) {
+  .secondary-nav .vcex-navbar.style-buttons a {
+    padding: 4px 6px;
+  }
+  .secondary-nav {
+    padding-left: 5px;
+  }
 }
 .second-nav-menu {
 	width: 30%;
@@ -268,6 +387,12 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	width: 25%;
 	margin-top: -5px;
 }
+/*-----Mobile Menu----*/
+..sidr-class-dropdown-menu li a {
+  font-family: 'Kabel';
+  font-size: 24px;
+}
+
 /*-----Code for Black Option on Nav Bar---
 -------Comment Out to Make White--------*/
 .secondary-nav {
@@ -282,7 +407,7 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	width: 90% !important;
 }
 .home-grid-titles {
-	font-family: 'FuturaPT-Demi';
+	font-family: 'Kabel';
 	letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 2rem;
@@ -301,28 +426,41 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	text-decoration: none !important;
 }
 .vc_btn-black, a.vc_btn-black, button.vc_btn-black {
-	font-family: 'FuturaPT-Demi';
+	font-family: 'Kabel';
 	letter-spacing: 3px;
 	margin-bottom: 20px;
+}
+/*--------------------------------------------------------------
+- JOURNAL PAGE
+--------------------------------------------------------------*/
+.page-id-54483 .home-grid-excerpts {
+  max-width: 600px;
+  margin: 0 auto;
 }
 /*--------------------------------------------------------------
 - CATEGORY PAGES
 --------------------------------------------------------------*/
 .category-grid-titles {
-  font-family: 'FuturaPT-Demi';
+  font-family: 'Kabel';
   letter-spacing: 3px;
   text-transform: uppercase;
   font-size: 2rem;
+  color: black !important;
+}
+.category-grid-titles a, .category-grid-excerpt a {
   color: black;
+  text-decoration: none;
+}
+.category-grid-titles a:hover, .category-grid-excerpt a:hover {
+  color: #989898;
 }
 .category-grid-excerpt {
     font-family: 'EB Garamond';
-    font-size: 2.2rem;
-    line-height: 3rem;
-    font-style: italic;
+    font-size: 1.6rem;
+    line-height: 2.4rem;
 }
 .wpex-carousel-entry-title {
-    font-family: 'FuturaPT-Demi';
+    font-family: 'Kabel';
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 3.6rem;
@@ -333,7 +471,7 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
     line-height: 2.6rem;
 	color: black;
 }
-.wpex-carousel-entry-title a:hover .wpex-carousel-entry-excerpt:hover {
+.wpex-carousel-entry-title a:hover, .wpex-carousel-entry-excerpt a:hover {
 	color: #ddd;
 }
 .wpex-carousel-entry-details {
@@ -348,7 +486,7 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	display: none;
 }
 .single-post .meta {
-	font-family: "FuturaPT-Demi";
+	font-family: "Kabel";
 	text-transform: uppercase;
 }
 .single-post-title {
@@ -362,20 +500,20 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	margin-bottom: 40px;
 }
 .post-in-category-features .single-post-title {
-	font-family: 'FuturaPT-Demi';
+	font-family: 'Kabel';
 	letter-spacing: 3px;
 	border-bottom: 0;
 	padding-bottom: 0px;
 }
 .post-in-category-features .single-post-title {
 	font-size: 5.2rem;
-	font-family: 'FuturaPT-Demi';
+	font-family: 'Kabel';
 	letter-spacing: 3px;
 	text-align: center;
 }
 .post-in-category-features .meta {
 	text-align: center;
-	font-family: 'FuturaPT-Demi';
+	font-family: 'Kabel';
 	letter-spacing: 3px;
 	font-size: 1.8rem;
 	color: #000;
@@ -394,16 +532,20 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 .post-in-category-features .meta-category, .post-in-category-features .meta-comments, .post-in-category-features #sidebar {
 	display: none;
 }
-@media only screen and (min-width: 1281px) {
-	.post-in-category-features .container, .vc_row-fluid.container {
-	  width: 1280px !important;
+@media screen and (max-width: 979px) {
+  .post-in-category-features .single-post-title {
+    padding: 0 15px;
+  }
+  .post-in-category-features .entry p {
+    padding: 0 10%;
+  }
 }
 /*--------------------------------------------------------------
 - CONTACT PAGE
 --------------------------------------------------------------*/
 .page-id-2495 {
 	font-size: 3rem;
-    font-family: 'FuturaPT-Demi';
+    font-family: 'Kabel';
     letter-spacing: 3px;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -413,6 +555,13 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
 	font-size: 1.6rem;
     font-family: 'EB-Garamond';
 }
+.page-id-2495 .entry-content a {
+  color: black;
+}
+.page-id-2495 .entry-content a:hover {
+  color: #b3b3b3 ;
+}
+
 /*--------------------------------------------------------------
 - Mail Chimp Styling, Overriding Parent's extension css sheet
 --------------------------------------------------------------*/
@@ -424,8 +573,9 @@ div.wpex-slider-caption.clr.sp-static.sp-layer.sp-black.over-image a {
     width: 60% !important;
     color: white !important;
     text-transform: uppercase !important;
-    padding-top: 15px !important; 
+    text-align: center !important;
     letter-spacing: 3px !important;
+    padding-top: 10px !important;
 }
 input[type="submit"]:hover, .theme-button:hover, button:hover. .secondary-nav .home button {
     color: #fff !important;
