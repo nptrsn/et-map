@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+ Theme Name     : Wine & Bowties 2015
+ Version        : 2.0.0
+ Description    : Visual Composer Extensions for Total
+ Author         : WPExplorer
+ Theme URI      : http://www.wpexplorer.com
+ Author URI     : http://www.wpexplorer.com
+ License        : Custom
+ License URI    : http://themeforest.net/licenses
+
+/*--------------------------------------------------------------
+- HOME FEATURES SLIDER
+--------------------------------------------------------------*/
+.vcex-posttype-slider-title .entry-title {
+	text-align:center !important;
+	margin-bottom: 30% !important;
+}
+.vcex-posttypes-slider .wpex-slider-caption.over-image .title:hover {
+	text-decoration: none !important;
+}
+
+/*--------------------------------------------------------------
+- Mail Chimp Styling
+--------------------------------------------------------------*/
+.vcex-newsletter-form input[type="email"] {
+	background: black !important;
+    border: black !important;
+    border-bottom: white 1px solid !important;
+    border-radius: 0 !important;
+    width: 60% !important;
+    color: white !important;
+    text-transform: uppercase !important;
+    padding: 0 !important;
+    text-align: center !important;
+}
