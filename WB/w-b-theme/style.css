@@ -41,7 +41,8 @@ Version: 1.1
   url('webfonts/2EC256_0_0.woff') format('woff'),
   url('webfonts/2EC256_0_0.ttf') format('truetype');
 }
-@font-face {font-family: 'P22UndergroundDemiBold';
+@font-face {
+  font-family: 'P22';
   src: url('webfonts/2EE463_0_0.eot');
   src: url('webfonts/2EE463_0_0.eot?#iefix') format('embedded-opentype'),
   url('webfonts/2EE463_0_0.woff2') format('woff2'),
@@ -60,15 +61,16 @@ Version: 1.1
 }
 #site-logo {
   content: url('http://wineandbowties.com/wp-content/uploads/2015/07/wb-logo-black.png');
-  height: 18px !important;
-  width: 300px;
-  margin-top: 5px;
+  height: 20px !important;
+  width: 324px;
+  margin-top: 7px;
 }
+
 .home #site-logo {
   content: url('http://wineandbowties.com/wp-content/uploads/2015/07/wb-logo-white.png');
-  height: 18px;
-  width: 300px;
-  margin-top: 35px;
+  height: 20px;
+  width: 325px;
+  margin-top: 32px;
 }
 /*----Main Margin----*/
 #main {
@@ -83,6 +85,11 @@ Version: 1.1
 	padding: 15px 0;
   height: 60px;
 }
+@media screen and (max-width: 1024px) and (min-width: 960px) {
+  #site-header-inner {
+    width: 950px;
+  }
+}
 #site-navigation li {
 	text-transform: uppercase;
 }
@@ -90,7 +97,7 @@ Version: 1.1
 	font-size: 16px;
 }
 .navbar-style-one .dropdown-menu > li > a {
-	font-family: 'Kabel';
+	font-family: 'P22';
 	color: black;
 	letter-spacing: 3px;
 }
@@ -98,11 +105,18 @@ Version: 1.1
 	color: black;
   text-decoration: underline;
 }
+@media screen and (max-width: 1024px) and (min-width: 960px) {
+  .navbar-style-one .dropdown-menu > li > a > span.link-inner {
+    padding 0.5em 0.6em;
+  }
+}
 .navbar-style-one .dropdown-menu a:hover, .navbar-style-one .dropdown-menu > .current-menu-item > a {
   color: black;
 }
-.home #site-navigation .dropdown-menu > li > a > span.link-inner:hover, .home #site-navigation .dropdown-menu > li > a > span.link-inner:active {
-	color: white;
+.home #site-navigation .dropdown-menu > li > a > span.link-inner,
+.home #site-navigation .dropdown-menu > li > a > span.link-inner:hover,
+.home #site-navigation .dropdown-menu > li > a > span.link-inner:active {
+	color: white !important;
 }
 .is-sticky #site-header {
      box-shadow: none; 
@@ -120,11 +134,14 @@ Version: 1.1
     height: 14px !important;
     margin-top: 7px;
   }
-  #site-header-sticky-wrapper.is-sticky div#site-logo.site-branding.header-one-logo {
-    margin-top: 12px;
+  body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky .header-one #site-logo {
+    margin-top: 11px !important;
   }
-  .home #site-logo {
-    margin-top: 35px !important;
+  .home .header-one #site-logo,
+  .home #site-header-sticky-wrapper.is-sticky div#site-logo.site-branding.header-one-logo {
+    width: 324px !important;
+    height: 20px !important;
+    margin-top: 32px !important;
   }
   /* Hiding Mobile Nav Social Icons */
   #sidr-id-menu-item-54687,
@@ -141,10 +158,10 @@ Version: 1.1
 #menu-item-54689 {
 	margin-left: 20px;
 }
-#menu-item-54687 span.link-inner {
-	padding: 7px 0 0 5px;
-}
-#menu-item-54688 span.link-inner, #menu-item-54689 span.link-inner, #menu-item-54690 span.link-inner {
+#menu-item-54688 span.link-inner, 
+#menu-item-54689 span.link-inner,
+ #menu-item-54690 span.link-inner,
+#menu-item-54687 span.link-inner  {
 	padding: 7px 0 0 0;
 }
 #menu-item-54687:hover, #menu-item-54688:hover, #menu-item-54689:hover, #menu-item-54690:hover {
@@ -159,11 +176,67 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 .single-post-title {
   text-transform: uppercase;
 }
-
+.content-full-screen .meta {
+  display: block;
+}
 .meta,
 .meta a {
   color: black;
 }
+/* Fix for Meta Centering Issue */
+@media screen and (min-width: 1300px) {
+  .post-in-category-features .meta {
+    margin-left: 40%;
+  }
+}
+@media screen and (max-width: 1300px) and (min-width: 1200px) {
+  .post-in-category-features .meta {
+    margin-left: 37%;
+  }
+}
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  .post-in-category-features .meta {
+    margin-left: 35%;
+  }
+}
+@media screen and (max-width: 1023px) and (min-width: 960px) {
+  .post-in-category-features .meta {
+    margin-left: 32% !important;
+  }
+}
+@media screen and (max-width: 959px) and (min-width: 780px) {
+  .post-in-category-features .meta {
+    margin-left: 30% !important;
+  }
+}
+@media screen and (max-width: 780px) and (min-width: 650px) {
+  .post-in-category-features .meta {
+    margin-left: 27% !important;
+  }
+}
+@media screen and (max-width: 649px) and (min-width: 580px) {
+  .post-in-category-features .meta{
+    margin-left: 25% !important;
+  }
+}
+@media screen and (max-width: 579px) and (min-width: 480px) {
+  .post-in-category-features .meta{
+    margin-left: 23% !important;
+  }
+}
+@media screen and (max-width: 579px) {
+  .post-in-category-features .meta {
+    font-size: 14px !important;
+    margin-top: 10px !important;
+  }
+}
+@media screen and (max-width: 479px) {
+  .post-in-category-features .meta{
+    margin-left: 17% !important;
+    font-size: 12px !important;
+  }
+}
+
 
 .meta-date .fa, .meta-author .fa {
 	display: none;
@@ -175,6 +248,12 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
    font-weight: bold;
  }
 /*-----Body Copy-----*/
+a {
+  color: black !important;
+}
+a:hover {
+  color: #989898 !important;
+}
 #primary {
 	width: 715px;
 }
@@ -203,6 +282,9 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 	width: 70%;
 	margin-right: 5%;
 }
+.footer-box.span_1_of_3.col.col-1 .textwidget {
+  font-size: 2rem;
+}
 .footer-box.span_1_of_3.col.col-2, .footer-box.span_1_of_3.col.col-3 { 
 	width: 25%;
 }
@@ -213,10 +295,20 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 	opacity: 0.6;
 }
 
+#footer-inner a {
+  color: white !important;
+}
+#footer-inner a:hover {
+  color: #989898 !important;;
+}
+.footer-social a:hover {
+  opacity: 0.7;
+}
+
 /*----Related Posts----*/
 .related-post-title {
     font-size: 2rem;
-    font-family: 'Kabel';
+    font-family: 'P22';
     letter-spacing: 3px;
 }
 
@@ -232,7 +324,7 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 - HOME PAGE
 --------------------------------------------------------------*/
 .home #site-logo a {
-    width: 300px;
+  width: 300px;
 }
 .home #site-header-inner {
 	width: 95% !important;
@@ -264,6 +356,33 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 @media only screen and (max-width: 959px) {
   #site-header #site-logo {
     margin-top: 8px !important;
+  }
+  .home #site-header #site-logo {
+    margin-top: 32px !important;
+  }
+}
+@media only screen and (max-width: 500px) {
+  #site-header #site-logo {
+    width: 266px !important;
+    height: 16px !important;
+  }
+  .home #site-header #site-logo {
+    margin-top: 34px !important;
+    margin-left: 4px;
+    height: 16px !important;
+    width: 266px !important;
+  }
+}
+@media only screen and (max-width: 430px) {
+   #site-header #site-logo {
+    width: 233px !important;
+    height: 14px !important;
+  }
+  .home #site-header #site-logo {
+    margin-top: 34px !important;
+    margin-left: 4px;
+    height: 15px !important;
+    width: 250px !important;
   }
 }
 
@@ -298,8 +417,20 @@ div.tp-rightarrow.tparrows {
     height: 75px;
     width: 50px;
 }
+@media screen and (max-width: 500px) {
+  div.tp-leftarrow.tparrows {
+    background: url("http://wineandbowties.com/wp-content/themes/w-b-theme/images/left-arrow-30.png");
+    height: 45px;
+    width: 30px;
+  }
+  div.tp-rightarrow.tparrows {
+    background: url("http://wineandbowties.com/wp-content/themes/w-b-theme/images/right-arrow-30.png");
+    height: 45px;
+    width: 30px;
+  }
+}
 div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
-	font-family: 'Kabel';
+	font-family: 'P22';
 	letter-spacing: 3px;
 	text-transform: uppercase !important;
 	font-size: 4rem;
@@ -311,8 +442,11 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 }
 .secondary-nav {
 	padding: 10px 0;
-	font-family: "Kabel";
+	font-family: "P22";
 	letter-spacing: 3px;
+}
+.secondary-nav a {
+  color: white !important;
 }
 @media screen and (max-width: 960px) {
   .secondary-nav {
@@ -329,8 +463,8 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 .second-nav-scroll {
 	position: fixed;
 	top: 0;
-	padding: 20px 0;
-  height: 80px;
+	padding: 10px 0 20px 0;
+  height: 90px;
   margin-bottom: 40px;
 	z-index: 9999;
 	width: 100%;
@@ -356,15 +490,26 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
     padding-left: 5px;
   }
 }
-.second-nav-menu {
-	width: 30%;
-	text-transform: uppercase;
+.second-nav-logo {
+	width: 10%;
+  position: absolute;
+  position: relative;
+  bottom: 5px;
+  right: 10px;
 }
-.second-nav-menu .vcex-navbar {
-	font-size: 1.6rem;
+@media screen and (max-width: 1024px) {
+  .second-nav-logo {
+    right: 0;
+  }
+}
+
+.second-nav-logo img {
+  width: 75px;
+  height: 75px;
 }
 .second-nav-submenu {
-	width: 25%;
+	width: 50%;
+  margin-top: 15px;
 	text-transform: uppercase;
 }
 .second-nav-submenu .vcex-navbar {
@@ -374,25 +519,26 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 	margin-top: -10px;
 }
 .second-nav-social {
-	width: 20%;
+	width: 18%;
+  margin-top: 15px;
 	text-align: center;
 }
 .second-social-wrap a:hover {
 	opacity: .7;
 }
-.second-nav-social {
-	width: 20%;
-}
 .second-nav-signup {
-	width: 25%;
-	margin-top: -5px;
+	width: 22%;
+	margin-top: 10px;
 }
 /*-----Mobile Menu----*/
-..sidr-class-dropdown-menu li a {
-  font-family: 'Kabel';
+.sidr-class-dropdown-menu li a {
+  font-family: 'P22';
   font-size: 24px;
+  color: white !important;
 }
-
+.sidr-class-dropdown-toggle {
+    color: #ffffff !important;
+}
 /*-----Code for Black Option on Nav Bar---
 -------Comment Out to Make White--------*/
 .secondary-nav {
@@ -407,7 +553,7 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 	width: 90% !important;
 }
 .home-grid-titles {
-	font-family: 'Kabel';
+	font-family: 'P22';
 	letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 2rem;
@@ -426,7 +572,7 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 	text-decoration: none !important;
 }
 .vc_btn-black, a.vc_btn-black, button.vc_btn-black {
-	font-family: 'Kabel';
+	font-family: 'P22';
 	letter-spacing: 3px;
 	margin-bottom: 20px;
 }
@@ -441,7 +587,7 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 - CATEGORY PAGES
 --------------------------------------------------------------*/
 .category-grid-titles {
-  font-family: 'Kabel';
+  font-family: 'P22';
   letter-spacing: 3px;
   text-transform: uppercase;
   font-size: 2rem;
@@ -460,7 +606,7 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
     line-height: 2.4rem;
 }
 .wpex-carousel-entry-title {
-    font-family: 'Kabel';
+    font-family: 'P22';
     letter-spacing: 3px;
     text-transform: uppercase;
     font-size: 3.6rem;
@@ -486,12 +632,13 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 	display: none;
 }
 .single-post .meta {
-	font-family: "Kabel";
-	text-transform: uppercase;
+	font-family: "P22";
+	text-transform: inherit;
+  font-size: 1.8rem;
 }
 .single-post-title {
-	border-bottom: 2px solid black;
-	padding-bottom: 10px;
+	font-family: "P22";
+  font-size: 2.6rem;
 }
 /*--------------------------------------------------------------
 - FEATURE ARTICLES
@@ -500,24 +647,33 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 	margin-bottom: 40px;
 }
 .post-in-category-features .single-post-title {
-	font-family: 'Kabel';
+	font-family: 'P22';
 	letter-spacing: 3px;
 	border-bottom: 0;
 	padding-bottom: 0px;
 }
 .post-in-category-features .single-post-title {
 	font-size: 5.2rem;
-	font-family: 'Kabel';
+	font-family: 'P22';
 	letter-spacing: 3px;
 	text-align: center;
+  max-width: 60%;
+  margin: 0 auto;
+  padding-bottom: 20px;
+}
+@media screen and (max-width: 550px) {
+  .post-in-category-features .single-post-title {
+    font-size: 3.2rem;
+    max-width: 100%;
+  }
 }
 .post-in-category-features .meta {
 	text-align: center;
-	font-family: 'Kabel';
+	font-family: 'P22';
 	letter-spacing: 3px;
 	font-size: 1.8rem;
 	color: #000;
-	margin-left: 40%;
+  text-transform: initial;
 }
 .post-in-category-features .meta a {
 	color: #000;
@@ -527,11 +683,15 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
     line-height: 3.4rem;
     font-family: 'EB Garamond';
     color: black;
-    padding: 0 15%;
+    padding: 0 20%;
 }
 .post-in-category-features .meta-category, .post-in-category-features .meta-comments, .post-in-category-features #sidebar {
 	display: none;
 }
+.entry-subtitle {
+  text-transform: initial;
+}
+
 @media screen and (max-width: 979px) {
   .post-in-category-features .single-post-title {
     padding: 0 15px;
@@ -545,7 +705,7 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 --------------------------------------------------------------*/
 .page-id-2495 {
 	font-size: 3rem;
-    font-family: 'Kabel';
+    font-family: 'P22';
     letter-spacing: 3px;
     margin-bottom: 10px;
     text-transform: uppercase;
@@ -570,24 +730,32 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
     border: black !important;
     border-bottom: white 1px solid !important;
     border-radius: 0 !important;
-    width: 60% !important;
+    width: 64% !important;
     color: white !important;
     text-transform: uppercase !important;
     text-align: center !important;
     letter-spacing: 3px !important;
-    padding-top: 10px !important;
+    padding-top: 13px !important;
+    font-size: .9em !important;
+}
+@media screen and (max-width: 1280px) {
+  .vcex-newsletter-form input[type="email"] {
+    font-size: .8em !important;
+  }
 }
 input[type="submit"]:hover, .theme-button:hover, button:hover. .secondary-nav .home button {
     color: #fff !important;
 }
 .vcex-newsletter-form-button {
-    width: 75px;
-    height: 50px !important;
+    width: 45px;
+    height: 30px !important;
     margin-bottom: 10px;
     text-indent: 1000px;
+    top: 70% !important;
 }
 button#mc-embedded-subscribe.vcex-newsletter-form-button {
     background: url('http://wineandbowties.com/wp-content/themes/w-b-theme/images/envelope.png');
     background-size: cover;
-    background-position-y: -15px;
+    background-position-y: -10px;
 }
+
