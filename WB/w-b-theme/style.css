@@ -254,6 +254,9 @@ a {
 a:hover {
   color: #989898 !important;
 }
+.entry a {
+  font-weight: bold !important;
+}
 #primary {
 	width: 715px;
 }
