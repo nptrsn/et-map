@@ -175,6 +175,12 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 /*----Post Meta----*/
 .single-post-title {
   text-transform: uppercase;
+  text-align: center;
+}
+.entry-subtitle {
+  font-size: .8em !important;
+  text-transform: initial;
+  margin-top: 15px;
 }
 .content-full-screen .meta {
   display: block;
@@ -183,60 +189,13 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 .meta a {
   color: black;
 }
-/* Fix for Meta Centering Issue */
-@media screen and (min-width: 1300px) {
-  .post-in-category-features .meta {
-    margin-left: 40%;
-  }
+.meta {
+  text-align: center;
 }
-@media screen and (max-width: 1300px) and (min-width: 1200px) {
-  .post-in-category-features .meta {
-    margin-left: 37%;
-  }
+.meta li {
+  float: none;
+  display: inline;
 }
-@media screen and (max-width: 1199px) and (min-width: 1024px) {
-  .post-in-category-features .meta {
-    margin-left: 35%;
-  }
-}
-@media screen and (max-width: 1023px) and (min-width: 960px) {
-  .post-in-category-features .meta {
-    margin-left: 32% !important;
-  }
-}
-@media screen and (max-width: 959px) and (min-width: 780px) {
-  .post-in-category-features .meta {
-    margin-left: 30% !important;
-  }
-}
-@media screen and (max-width: 780px) and (min-width: 650px) {
-  .post-in-category-features .meta {
-    margin-left: 27% !important;
-  }
-}
-@media screen and (max-width: 649px) and (min-width: 580px) {
-  .post-in-category-features .meta{
-    margin-left: 25% !important;
-  }
-}
-@media screen and (max-width: 579px) and (min-width: 480px) {
-  .post-in-category-features .meta{
-    margin-left: 23% !important;
-  }
-}
-@media screen and (max-width: 579px) {
-  .post-in-category-features .meta {
-    font-size: 14px !important;
-    margin-top: 10px !important;
-  }
-}
-@media screen and (max-width: 479px) {
-  .post-in-category-features .meta{
-    margin-left: 17% !important;
-    font-size: 12px !important;
-  }
-}
-
 
 .meta-date .fa, .meta-author .fa {
 	display: none;
@@ -254,8 +213,8 @@ a {
 a:hover {
   color: #989898 !important;
 }
-.entry a {
-  font-weight: bold !important;
+.single-post .entry a {
+  text-decoration: underline;
 }
 #primary {
 	width: 715px;
@@ -451,6 +410,10 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 .secondary-nav a {
   color: white !important;
 }
+.secondary-nav a:hover {
+  background-color: black !important;
+  text-decoration: underline;
+}
 @media screen and (max-width: 960px) {
   .secondary-nav {
     display: none;
@@ -641,13 +604,20 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 }
 .single-post-title {
 	font-family: "P22";
-  font-size: 2.6rem;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.entry-title-primary {
+  font-size: 3rem;
 }
 /*--------------------------------------------------------------
 - FEATURE ARTICLES
 --------------------------------------------------------------*/
 .post-in-category-features #post-media {
 	margin-bottom: 40px;
+}
+.post-in-category-features .entry-title-primary {
+  font-size: 5.6rem;
 }
 .post-in-category-features .single-post-title {
 	font-family: 'P22';
@@ -690,9 +660,6 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
 }
 .post-in-category-features .meta-category, .post-in-category-features .meta-comments, .post-in-category-features #sidebar {
 	display: none;
-}
-.entry-subtitle {
-  text-transform: initial;
 }
 
 @media screen and (max-width: 979px) {
