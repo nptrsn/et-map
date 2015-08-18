@@ -173,6 +173,14 @@ body.shrink-fixed-header #site-header-sticky-wrapper.is-sticky #site-header-inne
 }
 
 /*----Post Meta----*/
+.page-header {
+  background: white;
+  border: 0px transparent;
+  font-family: 'P22';
+}
+.site-breadcrumbs {
+  display: none;
+}
 .single-post-title {
   text-transform: uppercase;
   text-align: center;
@@ -256,7 +264,9 @@ a:hover {
 .wpex-social-widget-output li img:hover {
 	opacity: 0.6;
 }
-
+#footer-inner{
+  font-family: 'P22';
+}
 #footer-inner a {
   color: white !important;
 }
@@ -268,10 +278,12 @@ a:hover {
 }
 
 /*----Related Posts----*/
-.related-post-title {
-    font-size: 2rem;
+.related-post-title,
+.related-post-title .entry-title-primary {
+    font-size: 2rem !important;
     font-family: 'P22';
     letter-spacing: 3px;
+    text-transform: uppercase;
 }
 
 .related-post-excerpt p {
@@ -280,6 +292,9 @@ a:hover {
 }
 .related-post-excerpt h3 {
 	display: none;
+}
+.related-post-content .entry-subtitle {
+  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -356,7 +371,10 @@ a:hover {
     margin-top: 35px !important;
   }
 }
-
+/* Home Grid */
+.home .vc_grid.vc_row.vc_grid-gutter-30px .vc_grid-item {
+  padding-bottom: 0px;
+}
 /*----Features---- 
 ------Slider-----*/
 .home #main {
@@ -669,6 +687,12 @@ div.tp-caption.black.tp-fade.tp-resizeme.home-feature-slide {
   .post-in-category-features .entry p {
     padding: 0 10%;
   }
+} 
+/*--------------------------------------------------------------
+- ADVERTISE PAGE
+--------------------------------------------------------------*/
+.page-id-37480 .entry {
+  font-family: "P22";
 }
 /*--------------------------------------------------------------
 - CONTACT PAGE
